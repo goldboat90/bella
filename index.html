@@ -102,7 +102,7 @@
                             <h1 class="section-title">Text Messages</h1>
                             <p class="section-description">Enter your cell phone number to receive texts from loop minded.</p>
                             <div class="input-field">
-                                <input id="cell-num" type="tel" class="validate tel-input">
+                                <input oninput="restrictInvalid(this)" id="cell-num" type="tel" class="validate tel-input" pattern="^[0-9]{10,10}$" maxlength="10">
                                 <label class="input-label" for="cell-num">Cell Number:</label>
                             </div>
                         </div>
