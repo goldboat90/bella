@@ -1,0 +1,151 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" name="Tyler Rymer">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Bella Lash</title>
+</head>
+<body>
+    <div class="main-container container-fluid">
+        <nav class="side-nav">
+            <div class="offset-block"></div>
+            <div class="side-main-container">
+                <ul class="side-nav-content">
+                    <li class="side-nav-item">
+                        <a href="#">
+                            <i class="material-icons side-nav-icon">dashboard</i>
+                            <span class="icon-description">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a href="#">
+                            <i class="material-icons side-nav-icon">person</i>
+                            <span class="icon-description">Vendor</span>
+                        </a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a href="#">
+                            <i class="material-icons side-nav-icon">description</i>
+                            <span class="icon-description">Purchase</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="main-content-container">
+            <header class="main-header">
+                <div class="header-title-wrapper col">
+                    <h1 class="header-title">settings</h1>
+                </div>
+                <div class="col-auto">
+                    <a class="header-tab" href="#">My company</a>
+                </div>
+                <div class="col-auto">
+                    <a id="message-toggle" class="header-tab" href="#">Messages</a>
+                </div>
+                <div id="menu-toggle-wrapper" class="header-tab col-auto">
+                    <button class="menu-toggle" type="button">
+                            <i class="material-icons">menu</i>
+                    </button>
+                </div>
+            </header>
+            <div class="settings-widget-wrapper">
+                <div class="settings-widget-container">
+                    <div class="col-4">
+                        <div class="notification-widget-container switch">
+                            <label class="notification-label" for="notifications">Notifications
+                            <input checked id="notifications" name="notification_toggle" type="checkbox">
+                            <span class="lever"></span>
+                        </label>
+                        </div>
+                        <p class="section-description">How many days do you want to pass by before a notification is sent?</p>
+                        <div class="input-field frequency-select">
+                            <select name="frequency" id="notification-frequency">
+                                <option selected value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="25">25</option>
+                                <option value="30">30</option>
+                            </select>
+                        </div>
+                        <div class="emails-container">
+                            <h1 class="section-title">Emails</h1>
+                            <p class="section-description">Set the default emails.</p>
+                            <div class="input-field">
+                                <input id="shipping-email" type="email" class="validate email-input">
+                                <label class="input-label" for="shipping-email">Shipping:</label>
+                            </div>
+                            <div class="input-field">
+                                <input id="billing-email" type="email" class="validate email-input">
+                                <label class="input-label" for="billing-email">Billing:</label>
+                            </div>
+                            <div class="input-field">
+                                <input id="another-email" type="email" class="validate email-input">
+                                <label class="input-label" for="another-email">Another Email:</label>
+                            </div>
+                        </div>
+                        <div class="text-messages-container">
+                            <h1 class="section-title">Text Messages</h1>
+                            <p class="section-description">Enter your cell phone number to receive texts from loop minded.</p>
+                            <div class="input-field">
+                                <input id="cell-num" type="tel" class="validate tel-input">
+                                <label class="input-label" for="cell-num">Cell Number:</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="messages-container">
+        <div class="messages-header-bar">
+            <i id="message-back" class="material-icons">arrow_back</i>
+            <h1 class="new-conversation-title">New Conversation</h1>
+            <i id="close-message" class="material-icons">close</i>
+        </div>
+        <div class="messages-sub-header-bar">
+            <i id="add-contact" class="material-icons">add</i>
+            <span id="add-number">#</span>
+        </div>
+        <div id="message-area" class="message-history-container"></div>
+        <div class="send-message-container">
+            <div>
+                <ul class="message-list">
+                    <li>
+                        <a class="message-option" href="#">Conversation</a>
+                    </li>
+                    <li>
+                        <a class="message-option" href="#">Files</a>
+                    </li>
+                    <li>
+                        <a class="message-option" href="#">Logs</a>
+                    </li>
+                </ul> 
+            </div>
+            <div class="message-wrapper">
+                <div class="message-text-area" contenteditable="true"></div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="jquery.js"></script>
+
+</body>
+</html>
